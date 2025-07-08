@@ -1,9 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_testing/src/screens/common_screen/counter.dart';
+import 'package:http/http.dart';
+import 'package:mocktail/mocktail.dart';
 // PreTest()
 // setUp((){}); Before test start this run for each of the test
 // setUpAll((){}); Before test start this run only once
 
+class MockHTTPClient extends Mock implements Client{}
 void main() {
   late Counter counter;
   setUp(() {
