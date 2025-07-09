@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/src/screens/pages/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -36,10 +37,13 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
+                key:const ValueKey("ProfileNav"),
                 onPressed: () {
                   // Placeholder action
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => ProfileScreen()));
                 },
-                child: const Text('Test Navigation'),
+                child: const Text(''),
               ),
             ],
           ),
